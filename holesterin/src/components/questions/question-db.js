@@ -19,12 +19,14 @@ const questionsDB = [
         'id': 3, 
         'text' : 'Ваш рост?',
         'type' : 'textinput',
+        'ed' : 'см'
     },
 
     {
         'id': 4, 
         'text' : 'Ваш вес?',
         'type' : 'textinput',
+        'ed' : 'кг'
     },
 
     {
@@ -139,7 +141,7 @@ const questionsDB = [
 
     {
         'id': 14, 
-        'text' : 'Занимаетесь ли вы спортом 150 минут в неделю?',
+        'text' : 'Сколько шагов вы проходите в день?',
         'type' : 'radio',
         'values': [
             'Менее 10 тысяч шагов',

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import DatePicker from "react-datepicker";
-import { addDays } from 'date-fns';
+import { addYears } from 'date-fns';
 import "react-datepicker/dist/react-datepicker.css";
-
+import './datepicker.css';
 export default class DateTime extends  Component {
     state = {
       startDate: null
@@ -23,9 +23,9 @@ export default class DateTime extends  Component {
             peekNextMonth
             showMonthDropdown
             showYearDropdown
-            openToDate={new Date("1990/03/22")} 
+            openToDate={addYears(new Date(), -21)} 
             onChange={date => this.setStartDate(date)}
-            maxDate={addDays(new Date(), -10958)}
+            maxDate={addYears(new Date(), -21)}
             placeholderText="Выберите дату"/>
       );
     }

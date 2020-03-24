@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
-import DatePicker from "react-datepicker";
+import DatePicker, {registerLocale } from "react-datepicker";
+import { onCalc } from '../calculator/calculator';
 import { addYears } from 'date-fns';
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 import './datepicker.css';
+import ru from 'date-fns/locale/ru';  
+
+registerLocale('ru', ru);
+
+
 export default class DateTime extends  Component {
     state = {
       startDate: null
@@ -13,12 +19,12 @@ export default class DateTime extends  Component {
         startDate: null
       });
     };
-  
+    
     render() {
       return (
         <DatePicker
-            selected={this.state.startDate}
-            locale="ru-RU" 
+            selected={this.state.startDate} 
+            locale="ru" 
             dateFormat="yyyy MMMM dd"
             peekNextMonth
             showMonthDropdown
@@ -30,6 +36,3 @@ export default class DateTime extends  Component {
       );
     }
   }
-
-
- 

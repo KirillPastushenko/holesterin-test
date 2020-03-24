@@ -1,5 +1,5 @@
 import React from 'react';
-import Calculator, { onCalc } from '../calculator/calculator'
+import { calc } from '../calculator/calculator';
 import './radio-buttons.css';
 
 
@@ -9,7 +9,7 @@ const RadioButtons = ({id, values, child}) => {
         const name = 'answer-'+id;
         return (
             <label key={i} className="radio">
-                <input type="radio" onChange={() => onCalc({id, el}) } name={name}/> {el} 
+                <input type="radio" onChange={() => calc({id, el}) } name={name}/> {el} 
             </label>
         )
     });

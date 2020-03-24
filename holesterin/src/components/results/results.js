@@ -1,8 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './results.css';
-const Results = () => {
+
+const Results = ({ counter  }) => {
     return (
-        <div></div>
+        <div>{counter}</div>
     )
 }
-export default Results;
+ 
+const mapStateToProps = (state) => {
+    return {
+      counter: state
+    };
+};
+
+export default connect(mapStateToProps)(Results);

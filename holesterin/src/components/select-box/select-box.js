@@ -1,4 +1,5 @@
 import React from 'react';
+import  { calc }   from '../calculator/calculator';
 import './select-box.css';
 
  
@@ -6,7 +7,7 @@ import './select-box.css';
 const SelectBox = ({id, values}) => {
     const elems = values.map((el,i) => {
         return (
-            <option key={i}>{el}</option>
+            <option onClick={() => calc({id, el}) } key={i}>{el}</option>
         )
     });
  
